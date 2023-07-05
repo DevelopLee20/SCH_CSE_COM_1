@@ -43,12 +43,8 @@ def locker_reserve_loader(self):
     locker_data_list = []
     
     for data in locker_data.values:
-    
-        if str(data[1]) != "nan":
-            locker_data_list.append(str(int(data[1])))
-        else:
-            locker_data_list.append('-1')
-
-    print("[init data loader] ", len(locker_data_list), "locker_data_list load complete")
-
-    return {'locker_data_list' : locker_data_list}
+        print("data", data)
+        for i in data:
+            print(i, type(i))
+        print()
+        

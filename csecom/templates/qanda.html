@@ -2,6 +2,16 @@
 {% include "header.html" %}
 {% block content %}
 <body>
-    <h1>무동균 Q and A APP</h1>
+    <h2>큐엔에이</h2> 
+    <form action ="" method="post">
+        {% comment %}
+            {{ form.as_table }}
+            {{ form.as_p }}
+            {{ form.as_ul }}
+        {% endcomment %}
+        {{ form.as_p}}
+        {% csrf_token %}
+        <button type="submit" class="btn btn-primary">저장</button>
+    </form>
 </body>
 {% endblock %}
